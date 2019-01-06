@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Design System - Example',
+    title: 'Gatsby Design System - AOM Cloud Enterprise',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
