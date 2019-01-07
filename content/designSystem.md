@@ -3,7 +3,7 @@
 Use the specimens of gatsby-remark-design-system to build your own styleguide or design system!
 Read the complete README to see all options & examples in detail.
 
-GitHub license npm package LekoArts Homepage
+GitHub license npm package AOMCloudEnterprise  Homepage
 Audio
 
 If your brand has specific sounds for notifications or other sound signatures you can include them with the Audio specimen.
