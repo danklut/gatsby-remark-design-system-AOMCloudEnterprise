@@ -7,13 +7,13 @@ import './base.scss';
 const Layout = ({ children }) => (
   <div>
     <Helmet
-      title="Gatsby Design System - Example"
+      title="Gatsby Design System - AOM Cloud Enterprise"
       meta={[
         {
           name: 'description',
-          content: 'Gatsby Design System - Example for the remark plugin gatsby-remark-design-system',
+          content: 'Gatsby Design System - AOM Cloud Enterprise ,Design System for the AOM Cloud Enterprise Group',
         },
-        { name: 'keywords', content: 'Gatsby, Gatsby-Plugin, Remark, Design, System' },
+        { name: 'keywords', content: 'Gatsby, Gatsby-Plugin, Remark, Design, System,AOM Cloud Enterprise' },
       ]}
     />
     <div
