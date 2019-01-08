@@ -1,228 +1,321 @@
-Design System created with Gatsby
-
-Use the specimens of gatsby-remark-design-system to build your own styleguide or design system!
-Read the complete README to see all options & examples in detail.
-
-GitHub license npm package AOM Cloud Enterprise  Homepage
-Audio
-
-If your brand has specific sounds for notifications or other sound signatures you can include them with the Audio specimen.
-
-Options
-
-autoplay: boolean Default: false
-loop: boolean Default: false
-name: string
-span: number[1-6] Width of the specimen
-src: string The path/url to the file. Needs to be in quotes
-
-Example
-
-```audio
-span: 3
-name: Sound File #1
-src: "/sound.mp3"
-```
-
-```audio
-span: 3
-name: Sound File #2
-src: "/sound.mp3"
-```
-
-Live Example
-
-span: 3
-name: Sound File #1
-src: "/sound.mp3"
-
-span: 3
-name: Sound File #2
-src: "/sound.mp3"
-
-Color
-
-The colors of your brand. The swatches also include checks on the accessibility (AA). It checks black/white + small/large on your color. The Color specimen has a fixed width of 300px.
-
-Options
-
-color: string Define the color (in HEX, e.g. #b0f6ff)
-name: string
-
-Example
-
-```color
-name: Light Blue
-color: #b0f6ff
-```
-
-```color
-name: Smaragd
-color: #939d7b
-```
-
-Live Example
-
-name: Light Blue
-color: #b0f6ff
-
-name: Smaragd
-color: #939d7b
-
-Color-Palette
-
-A sequence of colors showing different shades. The Color-Palette also converts the input HEX color to RGB.
-
-Options
-
-name: string, color: string
-Each line represents a color. First define the name then after a comma the HEX value
-
-Example
-
-```color-palette
-T400 - Shabby, #448c6c
-T300 - Legendary, #dca114
-T200 - Smoke, #6c3b0b
-```
-
-Live Example
-
-T400 - Shabby, #448c6c
-T300 - Legendary, #dca114
-T200 - Smoke, #6c3b0b
-
-Download
-
-To link your logos and other resources you can use the Download specimen. You can also show a preview of the file.
-
-Options
-
-color: string Define the background color (in HEX, e.g. white) of the preview box
-image: boolean If true the image will be shown below
-span: number[1-6] Width of the specimen
-src: string The path/url to the file. Needs to be in quotes
-subtitle: string The filesize or other information
-title: string
-width: string The width of the preview image (default: 200px)
-
-Example
-
-```download
-color: white
-image: true
-span: 3
-src: "/logo.png"
-subtitle: 8KB
-title: Avatar Social
-width: 250px
-```
-
-Live Example
-
-title: Avatar Social
-subtitle: 8 KB
-src: "/logo.png"
-span: 3
-color: white
-image: true
-
-Example
-
-Insert your HTML code and see a live preview above the code sample.
-
-Options
-
-None
-
-Example
-
-```example
-<button>You can insert your HTML here</button>
-```
-
-Live Example
-
-<button>You can insert your HTML here</button>
-
-Hint
-
-Do give neutral hints or when talking about Dos & Don'ts you can use the Hint specimen.
-
-Options
-
-directive Green, positive note for showing Dos
-warning Red, warning note for showing Don'ts
-neutral Neutral note (Default)
-
-Example
-
-```hint|directive
-Make it so!
-```
-
-```hint
-Neutral Hint
-```
-
-```hint|warning
-nooooooooo, not this way
-```
-
-Live Example
-
-Make it so!
-
-Neutral Hint
-
-nooooooooo, not this way
-
-Typography
-
-You can use the Typography specimen to keep the numbers of different styles across the sites to a minimum.
-
-Options
-
-size: number|weight: number|metrics: string|weightDesc: string|usage: string
-Each line represents a type. You have to define the values in the mentioned order and seperate with |
-
-Example
-
-```typography
-42|700|Display|42, line height is 1.1x|Bold, 700|Display type is used for visual impact and emphasis
-32|400|Page title|32, line height is 1.1x|Normal, 400|Page title is used to provide hiearchy
-```
-
-Live Example
-
-42|700|Display|42, line height is 1.1x|Bold, 700|Display type is used for visual impact and emphasis
-32|400|Page title|32, line height is 1.1x|Normal, 400|Page title is used to provide hiearchy.
-
-Video
-
-You can use the Video specimen to include intros or other videos.
-
-Options
-
-autoplay: boolean Default: false
-loop: boolean Default: false
-muted: boolean Default: false
-name: string
-src: string The path/url to the file. Needs to be in quotes
-
-Example
-
-```video
-autoplay: false
-loop: false
-muted: false
-name: Animation Video
-src: "https://www.w3schools.com/html/mov_bbb.mp4"
-span: 3
-```
-
-Live Example
-
-name: Animation Video
-src: "https://www.w3schools.com/html/mov_bbb.mp4"
-span: 3
+const path = require('path');
+
+module.exports = {
+  mode: "production", // "production" | "development" | "none"
+    
+    
+    
+  // Chosen mode tells webpack to use its built-in optimizations accordingly.
+  entry: "./app/entry", // string | object | array
+    
+   
+    a 
+    b  
+  
+  // defaults to './src'
+  // Here the application starts executing
+  // and webpack starts bundling
+  output: {
+    // options related to how webpack emits results
+    path: path.resolve(__dirname, "dist"), // string
+    // the target directory for all output files
+    // must be an absolute path (use the Node.js path module)
+    filename: "bundle.js", // string
+      
+      
+    // the filename template for entry chunks
+    publicPath: "/assets/", // string
+     
+     
+    // the url to the output directory resolved relative to the HTML page
+    library: "MyLibrary", // string,
+    // the name of the exported library
+    libraryTarget: "umd", // universal module definition
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+    // the type of the exported library
+    /* Advanced output configuration (click to show) */
+      
+    
+     
+      
+    
+      
+    
+      
+      
+    
+     "webpack
+    
+     "webpack
+    
+      
+    
+      
+     
+     
+    
+  },
+  module: {
+    // configuration regarding modules
+    rules: [
+      // rules for modules (configure loaders, parser options, etc.)
+      {
+        test: /\.jsx?$/,
+        include: [
+          path.resolve(__dirname, "app")
+        ],
+        exclude: [
+          path.resolve(__dirname, "app/demo-files")
+        ],
+        // these are matching conditions, each accepting a regular expression or string
+        // test and include have the same behavior, both must be matched
+        // exclude must not be matched (takes preference over test and include)
+        // Best practices:
+        // - Use RegExp only in test and for filename matching
+        // - Use arrays of absolute paths in include and exclude
+        // - Try to avoid exclude and prefer include
+        issuer: { test, include, exclude },
+        // conditions for the issuer (the origin of the import)
+        enforce: "pre",
+        enforce: "post",
+        // flags to apply these rules, even if they are overridden (advanced option)
+        loader: "babel-loader",
+        // the loader which should be applied, it'll be resolved relative to the context
+        // -loader suffix is no longer optional in webpack2 for clarity reasons
+        // see webpack 1 upgrade guide
+        options: {
+          presets: ["es2015"]
+        },
+        // options for the loader
+      },
+      {
+        test: /\.html$/,
+        use: [
+          // apply multiple loaders and options
+          "htmllint-loader",
+          {
+            loader: "html-loader",
+            options: {
+              /* ... */
+            }
+          }
+        ]
+      },
+      { oneOf: [ /* rules */ ] },
+      // only use one of these nested rules
+      { rules: [ /* rules */ ] },
+      // use all of these nested rules (combine with conditions to be useful)
+      { resource: { and: [ /* conditions */ ] } },
+      // matches only if all conditions are matched
+      { resource: { or: [ /* conditions */ ] } },
+      { resource: [ /* conditions */ ] },
+      // matches if any condition is matched (default for arrays)
+      { resource: { not: /* condition */ } }
+      // matches if the condition is not matched
+    ],
+    /* Advanced module configuration (click to show) */
+     
+      
+    
+    
+    unknownContextRequest 
+    unknownContextRecursive 
+    unknownContextRegExp 
+    unknownContextCritical 
+    exprContextRequest 
+    exprContextRegExp 
+    exprContextRecursive 
+    exprContextCritical 
+    wrappedContextRegExp 
+    wrappedContextRecursive 
+    wrappedContextCritical 
+    
+  },
+  resolve: {
+    // options for resolving module requests
+    // (does not apply to resolving to loaders)
+    modules: [
+      "node_modules",
+      path.resolve(__dirname, "app")
+    ],
+    // directories where to look for modules
+    extensions: [".js", ".json", ".jsx", ".css"],
+    // extensions that are used
+    alias: {
+      // a list of module name aliases
+      "module": "new-module",
+      // alias "module" -> "new-module" and "module/path/file" -> "new-module/path/file"
+      "only-module$": "new-module",
+      // alias "only-module" -> "new-module", but not "only-module/path/file" -> "new-module/path/file"
+      "module": path.resolve(__dirname, "app/third/module.js"),
+      // alias "module" -> "./app/third/module.js" and "module/file" results in error
+      // modules aliases are imported relative to the current context
+    },
+    /* alternative alias syntax (click to show) */
+     
+      
+        name 
+        
+        alias 
+        
+        onlyModule 
+        
+        
+      
+    
+    /* Advanced resolve configuration (click to show) */
+     
+    
+     
+    
+     
+    
+    
+     
+    
+    
+     
+    
+    
+     
+     
+    
+     
+     
+    
+    
+    
+     path request  
+    
+     
+      
+    
+    
+  },
+  performance: {
+    hints: "warning", // enum
+      
+      
+    maxAssetSize: 200000, // int (in bytes),
+    maxEntrypointSize: 400000, // int (in bytes)
+    assetFilter: function(assetFilename) {
+      // Function predicate that provides asset filenames
+      return assetFilename.endsWith('.css') || assetFilename.endsWith('.js');
+    }
+  },
+  devtool: "source-map", // enum
+    
+    
+    
+    
+    
+    
+  // enhance debugging by adding meta info for the browser devtools
+  // source-map most detailed at the expense of build speed.
+  context: __dirname, // string (absolute path!)
+  // the home directory for webpack
+  // the entry and module.rules.loader option
+  //   is resolved relative to this directory
+  target: "web", // enum
+    
+    
+    
+    
+    
+    
+   compiler     
+  // the environment in which the bundle should run
+  // changes chunk loading behavior and available modules
+  externals: ["react", /^@angular\//],
+    
+    
+    
+    angular  
+    react  
+      commonjs 
+      commonjs2 
+      amd 
+      root 
+    
+  
+   request       request 
+  // Don't follow/bundle these modules, but request them at runtime from the environment
+  serve: { //object
+    port: 1337,
+    content: './dist',
+    // ...
+  },
+  // lets you provide options for webpack-serve
+  stats: "errors-only",
+    
+    assets 
+    colors 
+    errors 
+    errorDetails 
+    hash 
+    
+  
+  // lets you precisely control what bundle information gets displayed
+  devServer: {
+    proxy: { // proxy URLs to backend development server
+      '/api': 'http://localhost:3000'
+    },
+    contentBase: path.join(__dirname, 'public'), // boolean | string | array, static file location
+    compress: true, // enable gzip compression
+    historyApiFallback: true, // true for index.html upon 404, object for multiple paths
+    hot: true, // hot module replacement. Depends on HotModuleReplacementPlugin
+    https: false, // true for self-signed, object for cert authority
+    noInfo: true, // only errors & warns on hot reload
+    // ...
+  },
+  plugins: [
+    // ...
+  ],
+  // list of additional plugins
+  /* Advanced configuration (click to show) */
+     
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+   
+      
+    
+     
+      
+    
+    
+    
+  
+   
+    
+    
+      
+      
+      
+      
+      
+      
+      
+  
+   path__dirname 
+   path__dirname 
+   path__dirname 
+  
+}
